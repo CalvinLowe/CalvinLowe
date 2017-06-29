@@ -16,7 +16,7 @@ main {
   border: 2px solid #d8d8f6;
 }
 
-h1, h2, p {
+h1, h2, p, a, input, label, button {
   font-family: proxima-nova, sans-serif;
   color: #d8d8f6;
   text-align: center;
@@ -33,15 +33,18 @@ h2 {
   margin: 0.2em 0;
 }
 
-a:link {
+a:link, button {
   color: #fb4b4e;
   border: 1px solid #fb4b4e;
   padding: 1em;
   text-decoration: none;
   transition: all 350ms ease-in;
+  cursor: pointer;
+  background-color: #07020D;
+  font-size: 1em;
 }
 
-a:hover, a:focus {
+a:hover, a:focus, button:hover, button:hover {
   color: #07020D;
   background-color: #fb4b4e;
 }
