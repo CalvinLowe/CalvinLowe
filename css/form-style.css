@@ -3,7 +3,7 @@
 form {
   /* Just to center the form on the page */
   margin: 0 auto;
-  width: 400px;
+  min-width: 400px;
   /* To see the outline of the form */
   padding: 1em;
   border: 2px solid #fb4b4e;
@@ -16,8 +16,9 @@ form div + div {
 label {
   /* To make sure that all labels have the same size and are properly aligned */
   display: inline-block;
-  width: 90px;
+  min-width: 90px;
   text-align: right;
+  margin-right: 1em;
 }
 
 input, textarea {
@@ -28,7 +29,7 @@ input, textarea {
   color: #07020D;
 
   /* To give the same size to all text fields */
-  width: 300px;
+  min-width: 300px;
   box-sizing: border-box;
 
   /* To harmonize the look & feel of text field border */
@@ -50,13 +51,59 @@ textarea {
 
 .button {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   /* To position the buttons to the same position of the text fields */
-  padding-left: 90px; /* same size as the label elements */
+  padding-left: 105px; /* same size as the label elements */
 }
-
 button {
+  position: relative;
   /* This extra margin represent roughly the same space as the space
      between the labels and their text fields */
   margin-left: .5em;
 }
+
+/*------------------------------------*\
+  #BUTTON-BEHAVIOUR
+\*------------------------------------*/
+button.cancel::after {
+  position: absolute;
+  content: "\2716";
+  color: #07020D;
+  opacity: 0;
+  transition: padding .4s;
+}
+button.cancel:hover::after {
+  margin-left: 0;
+  opacity: 1;
+  padding: 0 0.25em;
+  transition: padding .4s;
+}
+
+button[type="submit"]::after {
+  position: absolute;
+  content: "\25C0";
+  transform: rotate(0.5turn);
+  color: #07020D;
+  opacity: 0;
+  transition: padding .4s;
+}
+button[type="submit"]:hover, button.cancel:hover {
+  padding-right: 2em;
+  transition: all 0.4s;
+}
+button[type="submit"]:hover::after {
+  margin-left: 0;
+  opacity: 1;
+  padding: 0 0.25em;
+  transition: padding .4s;
+}
+button[type="submit"]:active::after, button.cancel:active:after {
+  content: "\25D5";
+  transform: rotate(2turn);
+  transition: transform 2s;
+}
+/* Do this once form is complete */
+/*button[type="submit"]:active::after {
+  content: "\2713";
+  transform: rotate(0turn);
+}*/

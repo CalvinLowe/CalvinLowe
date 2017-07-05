@@ -16,9 +16,12 @@ main {
   border: 2px solid #d8d8f6;
 }
 
-h1, h2, p, a, input, label, button {
+h1, h2, h3, legend, input, label, button, p, a {
   font-family: proxima-nova, sans-serif;
   color: #d8d8f6;
+}
+
+.centre {
   text-align: center;
 }
 
