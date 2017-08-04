@@ -16,7 +16,7 @@
 </head>
 <body>
   <main>
-    <form action="#/form-handler" method="post">
+    <form action="/form-handler.php" method="post">
       <h2 class="centre">Contact Form</h2>
       <p class="centre">Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
       <div>
@@ -24,28 +24,28 @@
           <span>Name: </span>
           <strong><abbr title="required">*</abbr></strong>
         </label>
-        <input type="text" id="name" name="user_name">
+        <input type="text" id="user_name" name="user_name">
       </div>
       <div>
         <label for="email">
           <span>E-mail: </span>
           <strong><abbr title="required">*</abbr></strong>
         </label>
-        <input type="email" id="email" name="user_mail">
+        <input type="email" id="user_email" name="user_mail">
       </div>
       <div>
         <label for="subject">
           <span>Subject: </span>
           <strong><abbr title="required">*</abbr></strong>
         </label>
-        <input type="text" id="subject" name="user_mail">
+        <input type="text" id="email_subject" name="email_subject">
       </div>
       <div>
         <label for="message">
           <span>Message: </span>
           <strong><abbr title="required">*</abbr></strong>
         </label>
-        <textarea id="message" name="user_message"></textarea>
+        <textarea id="email_message" name="email_message"></textarea>
       </div>
       <div class="button">
         <button class="cancel" type="button">Cancel</button><button class="submit" type="submit">Send your message</button>

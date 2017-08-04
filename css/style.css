@@ -1,4 +1,11 @@
 @charset "UTF-8";
+
+/*
+ * #07020D - Rich Black (FOGRA39)
+ * #d8d8f6 - Pale Lavender
+ * #fb4b4e - Tart Orange
+ * #333745 - Onyx
+ */
 body {
   box-sizing: border-box;
   margin: 0;
