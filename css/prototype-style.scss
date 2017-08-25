@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Styles for https://calvinlowe.com
 */
@@ -12,10 +13,11 @@ Styles for https://calvinlowe.com
 # Navigation
 # Animation
 --------------------------------------------------------------*/
+
 /*--------------------------------------------------------------
 # Variables
 --------------------------------------------------------------*/
-/*
+ /*
 * #07020D - Rich Black (FOGRA39)
 * #d8d8f6 - Pale Lavender
 * #fb4b4e - Tart Orange
@@ -23,21 +25,23 @@ Styles for https://calvinlowe.com
 */
 :root {
   --main-bg-colour: #d8d8f6;
-  --main-txt-colour: #07020D;
-  --header-bg-colour: #07020D;
-  --header-txt-colour: #d8d8f6;
-  --accent-colour: #fb4b4e;
-  --neutral-gray: #333745; }
+  --main-txt-colour: #07020D; // #07020D - Rich Black (FOGRA39)
+  --header-bg-colour: #07020D; // #07020D - Rich Black (FOGRA39)
+  --header-txt-colour: #d8d8f6; // #d8d8f6 - Pale Lavender
+  --accent-colour: #fb4b4e; // #fb4b4e - Tart Orange
+  --neutral-gray: #333745; // #333745 - Onyx
+}
 
 /*--------------------------------------------------------------
 # Normalise
 --------------------------------------------------------------*/
 html {
-  box-sizing: border-box; }
-
+  box-sizing: border-box;
+}
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 /*--------------------------------------------------------------
 # Typography
@@ -45,7 +49,8 @@ body {
 body {
   font-family: proxima-nova, sans-serif;
   color: var(--main-txt-colour);
-  background-color: var(--main-bg-colour); }
+  background-color: var(--main-bg-colour);
+}
 
 /*--------------------------------------------------------------
 # Base
@@ -55,43 +60,50 @@ header {
   padding: 10vw 0 0 10vw;
   border-bottom: 4px solid var(--accent-colour);
   background-color: var(--header-bg-colour);
-  color: var(--header-txt-colour); }
+  color: var(--header-txt-colour);;
+}
 
 a:link, button {
   color: var(--accent-colour);
-  text-decoration: none;
-  cursor: pointer; }
 
+  text-decoration: none;
+  cursor: pointer;
+}
 a:hover, a:focus, button:hover, button:hover {
-  color: var(--main-txt-colour); }
+  color: var(--main-txt-colour);
+}
 
 /*--------------------------------------------------------------
 # Layout
 --------------------------------------------------------------*/
+
 /*--------------------------------------------------------------
 # Logo
 --------------------------------------------------------------*/
+.logo {}
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
 nav {
   width: 100%;
-  max-width: 100%; }
-
+  max-width: 100%;
+}
 nav ul {
   list-style: none;
   display: flex;
   justify-content: flex-end;
-  padding: 0; }
-
+  padding: 0;
+}
 nav ul a:link {
   border: none;
   padding: 1em;
-  color: var(--header-txt-colour); }
-
+  color: var(--header-txt-colour);
+}
 nav ul a:hover {
   color: var(--main-txt-colour);
-  background-color: var(--accent-colour); }
+  background-color: var(--accent-colour);
+}
 
 /*--------------------------------------------------------------
 # Buttons
@@ -101,10 +113,11 @@ nav ul a:hover {
   border: 2px solid var(--accent-colour);
   padding: 1em;
   text-decoration: none;
-  cursor: pointer; }
-
+  cursor: pointer;
+}
 .button:hover {
-  background-color: var(--accent-colour); }
+  background-color: var(--accent-colour);
+}
 
 /*--------------------------------------------------------------
 # Animation - INCLUDE IN VERSION 2
@@ -120,4 +133,5 @@ nav ul a:hover {
 .button-animation-fill {
   animation: bottomFill 1s infinite alternate cubic-bezier(.53,.14,.83,.67);
 }*/
+
 /* button fill animation from bottom */
