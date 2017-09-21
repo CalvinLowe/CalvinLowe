@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+/*
+ * #07020D - Rich Black (FOGRA39)
+ * #d8d8f6 - Pale Lavender
+ * #fb4b4e - Tart Orange
+ * #333745 - Onyx
+ */
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 1em;
+  background-color: #07020D;
+}
+
+main {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1em;
+  border: 2px solid #d8d8f6;
+}
+
+h1, h2, h3, legend, input, label, button, p, a {
+  font-family: proxima-nova, sans-serif;
+  color: #d8d8f6;
+}
+
+.centre {
+  text-align: center;
+}
+
+h1 {
+  font-size: 3em;
+  line-height: 1em;
+  margin: 0.4em 0;
+}
+h2 {
+  font-size: 2em;
+  line-height: 1em;
+  margin: 0.2em 0;
+}
+
+a:link, button {
+  color: #fb4b4e;
+  border: 1px solid #fb4b4e;
+  padding: 1em;
+  text-decoration: none;
+  transition: all 350ms ease-in;
+  cursor: pointer;
+  background-color: #07020D;
+  font-size: 1em;
+}
+
+a:hover, a:focus, button:hover, button:hover {
+  color: #07020D;
+  background-color: #fb4b4e;
+}
+
+@media (min-height: 455px){
+  body {
+    min-height: 100vh;
+    height: 100vh;
+    max-height: 100vh;
+  }
+  main {
+    height: 100%;
+    max-height: 100%;
+    width: 100%;
+  }
+}
+
+@media (min-width: 600px) and (min-height: 320px){
+
+body {
+  min-height: 100vh;
+  height: 100vh;
+  max-height: 100vh;
+}
+main {
+  height: 100%;
+  max-height: 100%;
+  width: 100%;
+}
+}
+
+@media (min-width: 600px) and (min-height: 600px) {
+  h1 {
+    font-size: 4em;
+  }
+  h2 {
+    font-size: 3em;
+  }
+}

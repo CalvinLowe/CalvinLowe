@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Calvin Lowe Web Design &amp; Development - Providing great value for your small business</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Calvin Lowe" />
+  <meta name="description" content="Calvin Lowe is a front end web developer specialising in WordPress &amp; custom website design &amp; development for small business" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://use.typekit.net/dzp8trh.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+</head>
+<body>
+  <main>
+    <h1 class="centre">Calvin Lowe</h1>
+    <h2 class="centre">Website Design &amp; Development.</h2>
+    <p class="centre">If you made it this far and would like to work with me. I'd love to hear from you.</p>
+    <p class="centre"><a tabindex="0" href="mailto:calvin@calvinlowe.com">Email me</a></p>
+  </main>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-92523901-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</body>
+</html>
