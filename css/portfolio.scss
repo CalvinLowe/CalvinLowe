@@ -10,50 +10,61 @@
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
+// TODO Add variables for colours, fonts sizes.
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
 * {
-  box-sizing: border-box; }
-
+    box-sizing: border-box;
+}
 body {
-  margin: 0; }
+    margin: 0;
+}
 
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
+// TODO import fonts
 * {
-  font-family: san-serif; }
-
+    font-family: san-serif;
+}
 body {
-  font-family: proxima-nova, sans-serif; }
+    font-family: proxima-nova, sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
 
+}
 /*--------------------------------------------------------------
     ## Colours
 --------------------------------------------------------------*/
 body {
-  background: #F5F7F9; }
-
+    background: #F5F7F9;
+}
+header, footer {}
 section {
-  color: #07020D;
-  background: #FFFFFF;
-  border: 1px solid #eaecee; }
+    color: #07020D;
+    background: #FFFFFF;
+    border: 1px solid #eaecee;
+}
 
 /*--------------------------------------------------------------
 # Layout
 --------------------------------------------------------------*/
 main {
-  display: grid;
-  grid-template-columns: 1fr minmax(200px, 900px) 1fr;
-  grid-template-rows: repeat(auto-fill);
-  grid-template-areas: "sidebar1 main sidebar2"; }
-
+    display: grid;
+    grid-template-columns: 1fr minmax(200px, 900px) 1fr;
+    grid-template-rows: repeat(auto-fill);
+    grid-template-areas: "sidebar1 main sidebar2"
+}
 main h1 {
-  grid-area: main; }
-
+    grid-area: main;
+}
 section {
-  grid-area: main; }
-
+    grid-area: main;
+}
 img {
-  display: none;
-  width: 100%; }
+    //display: block;
+    display: none;
+    width: 100%;
+}
+.project-screenshot {}
