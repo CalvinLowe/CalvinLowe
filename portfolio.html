@@ -7,23 +7,29 @@
   <meta name="author" content="Calvin Lowe" />
   <meta name="description" content="Calvin Lowe is a front end web developer specialising in WordPress &amp; custom website design &amp; development for small business" />
   <link rel="stylesheet" href="css/portfolio.css" />
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Oswald:500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:900%7COpen+Sans" rel="stylesheet">
 </head>
 <body class="portfolio">
-  <header class="page-header">
-    <h1>Calvin Lowe Web Design &amp; Development</h1>
+  <!-- Header -->
+  <header class="header header--page">
+    <h1 class="header--page__h1">Calvin Lowe</h1>
+    <svg class="header--page__svg" width="86" height="86">
+    <!-- Alert SVG icon -->
+    <ellipse cx="43" cy="43" rx="40" ry="40"></ellipse>
+    <ellipse style="fill:black;" cx="43" cy="65" rx="5" ry="5"></ellipse>
+    <line style="stroke-width: 8;" x1="43" y1="19" x2="43" y2="48"></line>
+    </svg>
+    <h2 class="header--page__h2">Web Design &amp; Development</h2>
   </header>
-  <main>
-    <h2>Portfolio.</h2>
-
+  <!-- Main -->
+  <main class="main">
+    <h2 class="main__h2">Portfolio.</h2>
     <article class="project">
-
       <header class="project-header">
           <h3 class="project-name">The Natural Nutritionist</h3>
           <a class="project-link" href="https://thenaturalnutritionist.com.au">https://thenaturalnutritionist.com.au</a>
           <img class="project-logo" src="http://via.placeholder.com/235x128" alt="Ipsum dolor">
       </header>
-
       <section class="project-description">
         <h4>Project Description</h4>
         <p>The Client: The Natural Nutritionist, a small business based in Melbourne, Victoria.</p>
@@ -31,20 +37,17 @@
         <p>The Website: Blogs and store.</p>
         <p class="project-technologies">Technolgoies used: <a href="#">Tech 1</a>, <a href="#">Tech 2</a>,</p>
       </section>
-
       <figure class="project-screenshot sml">
           <img src="http://via.placeholder.com/320x480" alt="Ipsum dolor">
           <figcaption>Description of screenshot</figcaption>
       </figure>
-
       <figure class="project-screenshot lg">
         <img src="http://via.placeholder.com/800x400" alt="Ipsum dolor">
         <figcaption>Description of screenshot</figcaption>
       </figure>
-
     </article>
-
   </main>
+  <!-- Footer -->
   <footer class="page-footer">
     <small>Calvin Lowe Website Design &amp; Development. &copy; 2018</small>
   </footer>
