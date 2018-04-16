@@ -27,15 +27,11 @@ body {
   margin: 0;
 }
 main {
-  background-color: #fff;
+  background-color: #e5e5e5;
   border-top: 5px solid #fb4b4e;
+  border-radius: 4px 4px 0 0;
 }
-article {
-  color: #d8d8f6;
-  background-color: #07020D;
-  border-top: 5px solid #fb4b4e;
-}
-h1, h2,{
+h1, h2 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 900;
 }
@@ -48,16 +44,15 @@ h1, h2,{
   margin: 0;
   padding: 0;
 }
-header {
+.page-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1em;
+  grid-template-rows: 1fr 1fr;
 }
-h1 {
-  margin-bottom: 0;
-}
-h2 {
-  margin-top: 0;
-}
-.module {
-  padding: 1em;
+.nav-global {
+  grid-column-start: 2;
+  grid-row-start: 2;
 }
 @media screen and (min-width: 1000px) {
   body  {
@@ -76,25 +71,81 @@ h2 {
     margin: 1em;
   }
   .page-header {
+    padding: 0;
     grid-column-start: 1;
     grid-column-end: span 3;
-  }
-  .module {
-    margin: 1em;
-    padding: 1em;
   }
 }
 
 /*=============================================================================
 # 3. Module
 =============================================================================*/
+/* Logo placeholder */
+.monogram {
+  font-size: 5em;
+  margin: 0;
+  border: 1px solid darkblue;
+  border-radius: 4px;
+  width: 250px;
+  height: 100px;
+  font-weight: 800;
+  text-align: left;
+}
+
+
+.page-header h1 {
+  font-size: 3em;
+  margin: 0;
+}
+.nav-global .menu {
+  list-style: none;
+  display: flex;
+  background-color: #fcfcfc;
+  padding: 0;
+  box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+  margin: 0;
+  
+}
+.nav-global .menu li {
+  display: block;
+  flex-grow: 1;
+  padding: 1em;
+  border-top: 5px solid #e5e5e5;
+}
+.menu li:hover, .menu li:active {
+  border-top: 5px solid #fb4b4e;
+}
+
+.module {
+  color: #07020D;
+  background-color: #fcfcfc;
+  border-top: 5px solid #fb4b4e;
+  box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+  border-radius: 4px 4px 0 0;
+  margin: 1em;
+}
+/*.module:hover {
+  border-top: 5px solid #fb4b4e;
+}*/
 .module-header {
+  text-align: center;
+  background-color: #f4f4f4;
+  margin: 0;
+  margin-bottom: 2em;
+  border-bottom: 1px solid #e5e5e5;
+}
+.module p:first-of-type {
+  float: left;
+}
+.module p {
+  padding: 0 2em;
 }
 
 .profile {
   display: block;
   border-radius: 50%;
   margin: auto;
+  box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
 }
 .button {
   font-family: 'Montserrat', sans-serif;
