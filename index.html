@@ -14,6 +14,11 @@
 <body>
   <main class="grid-container">
     <header class="page-header">
+
+        <svg class="logo" width="50" height="45">
+            <use href="#logo"></use>
+        </svg>
+
         <h1>Calvin Lowe</h1>
         <nav id="navigation" class="nav nav-global">
           <ul class="menu">
@@ -27,15 +32,36 @@
     </header>
     <article class="module" id="about">
       <header class="module-header">
-          <h2>About Calvin</h2>
+          <svg>
+              <use xlink:href="svg/fa-solid.svg#user"></use>
+          </svg>
+          <h2 class="module-heading">About Calvin</h2>
       </header>
       <aside>
-          <img class="profile" alt="Calvin Lowe" src="img/CalvinLoweProfile_1000x1000.jpg" width="200" height="200">
+          <img class="profile" alt="Calvin Lowe" src="img/CalvinLoweProfile_1000x1000.jpg" width="175" height="175">
           <nav class="nav nav-social">
               <ul class="menu">
-                  <li><a href="#">Github</a></li>
-                  <li><a href="#">Twitter</a></li>
-                  <li><a href="#">Codepen</a></li>
+                  <li>
+                    <a title="Calvin's GitHub profile" href="https://github.com/CalvinLowe">
+                        <svg>
+                            <use xlink:href="svg/fa-brands.svg#github"></use>
+                        </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a title="Calvin's Twitter profile" href="https://twitter.com/calvinwlowe">
+                        <svg>
+                            <use xlink:href="svg/fa-brands.svg#twitter"></use>
+                        </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a title="Calvin's Codepen profile" href="https://codepen.io/clwebdev/#">
+                        <svg>
+                            <use xlink:href="svg/fa-brands.svg#codepen"></use>
+                        </svg>
+                    </a>
+                  </li>
               </ul>
           </na>
       </aside>
@@ -43,13 +69,21 @@
       <p>When Calvin is not helping small businesses implement their ideas on the web, he is busy studying in the Master of Information Technology program at The University of Queensland.</p>
       <p>Calvin also has a Bachelor of Science with a major in Biophysics and in his previous life worked as a Quality Control Chemist. His love and of knowledge of science can occasionally be seen in some previous writing. Calvin reserves the right to blog on any topic between science and technology and the web.</p>
       <p>If you made it this far and would like to work with me. I'd love to hear from you.</p>
-      <a class="button" title="Email Calvin" href="mailto:calvin@calvinlowe.com">Email me</a>
+
+      <button class="button" title="Email Calvin" href="mailto:calvin@calvinlowe.com">Email me</button>
     </article>
 
     <article class="module" id="portfolio">
       <header class="module-header">
-          <h2 >Portfolio</h2>
+          <svg>
+              <use xlink:href="svg/fa-solid.svg#paint-brush"></use>
+          </svg>
+          <h2 class="module-heading">Portfolio</h2>
+          <svg>
+              <use xlink:href="svg/fa-solid.svg#code"></use>
+          </svg>
       </header>
+      <p>Make a flip card that shows a nice image that when you hover or click it flips over to show some project details. Then click in to go to the individual project page.</p>
       <figure>
         <img alt="Calvin Lowe" src="http://via.placeholder.com/200x100">
         <figcaption>Project 1</figcaption>
@@ -62,7 +96,10 @@
 
       <article class="module" id="blog">
           <header class="module-header">
-              <h2>Blog</h2>
+              <svg>
+                  <use xlink:href="svg/fa-solid.svg#keyboard"></use>
+              </svg>
+              <h2 class="module-heading">Blog</h2>
           </header>
           <p>Calvin Lowe is freelance a web developer living in Brisbane, Australia. Professionally he specialises in helping small business create and optimise their prescence on the web.</p>
           <p>Calvin Lowe is freelance a web developer living in Brisbane, Australia. Professionally he specialises in helping small business create and optimise their prescence on the web.</p>
@@ -74,5 +111,25 @@
           <p>Calvin Lowe is freelance a web developer living in Brisbane, Australia. Professionally he specialises in helping small business create and optimise their prescence on the web.</p>
         </article>
   </main>
+
+  <svg class="hidden">
+      <defs>
+
+        <g id="logo">
+            <!-- Flag logo icon -->
+            <rect width="50" height="45" fill="#07020D"/>
+            <rect width="50" height="30" fill="#fff"/>
+            <rect width="50" height="15" fill="#fb4b4e"/>
+        </g>
+
+        <g id="menu">
+            <!-- Hamburger menu -->
+            <line x1="3" y1="3" x2="48" y2="3"></line>
+            <line x1="3" y1="19" x2="48" y2="19"></line>
+            <line x1="3" y1="35" x2="48" y2="35"></line>  
+        </g>
+
+      </defs>
+    </svg>
 </body>
 </html>
