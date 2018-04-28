@@ -11,9 +11,14 @@
 # 1. Base
 # 2. Layout
 # 3. Module
-  # 3.1. Social navigation
-  # 3.2. SVG
-  # 3.3. Buttons
+  # 3.0. Default
+  # 3.1. Global navigation
+    # 3.1.1. Global navigation - Mobile
+    # 3.1.2. Global navigation - Desktop
+  # 3.2. Global header
+  # 3.3. Social navigation
+  # 3.4. SVG
+  # 3.5. Buttons
 # 4. State
 # 5. Theme
 =============================================================================*/
@@ -34,7 +39,7 @@ main {
   border-top: 5px solid #fb4b4e;
   border-radius: 4px 4px 0 0;
 }
-h1, h2 {
+h1, h2, button {
   font-family: 'Montserrat', sans-serif;
   font-weight: 900;
 }
@@ -49,7 +54,7 @@ h1, h2 {
 }
 .page-header {
   display: grid;
-  grid-template-columns: 50px 1fr 1fr 1fr;
+  grid-template-columns: 50px 1fr;
   grid-gap: 1em;
   grid-template-rows: 1fr 1fr;
 }
@@ -86,46 +91,10 @@ h1, h2 {
 /*=============================================================================
 # 3. Module
 =============================================================================*/
-/* Logo placeholder */
-.monogram {
-  font-size: 5em;
-  margin: 0;
-  border: 1px solid darkblue;
-  border-radius: 4px;
-  width: 250px;
-  height: 100px;
-  font-weight: 800;
-  text-align: left;
-} /* TODO */
-
-.page-header h1 {
-  font-size: 3em;
-  margin: 0;
-}
-.nav-global .menu {
-  list-style: none;
-  display: flex;
-  background-color: #fcfcfc;
-  padding: 0;
-  box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
-  margin: 0;
-  
-}
-.nav-global .menu li {
-  display: block;
-  flex-grow: 1;
-  padding: 1em;
-  border-top: 5px solid #e5e5e5;
-}
-.nav-global .menu li:hover, .nav-global  .menu li:active {
-  border-top: 5px solid #fb4b4e;
-}
-
-.menu svg {
-  height: 2em;
-  width: 2em;
-}
-
+/*=============================================================================
+# 3. Module
+  # 3.0. Default
+=============================================================================*/
 .module {
   color: #07020D;
   background-color: #fcfcfc;
@@ -149,28 +118,122 @@ h1, h2 {
   width: 2em;
   padding: .1em;
 }
+svg.icon {
+  height: 2em;
+  width: 2em;
+  padding: .1em;
+}
 .module-header .module-heading {
   margin: 1em 0.5em;
 }
-
 .module p:first-of-type {
   float: left;
 }
 .module p {
   padding: 0 2em;
 }
-
 .profile {
   display: block;
   border-radius: 50%;
   margin: auto;
   box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
 }
+/*=============================================================================
+# 3. Module
+  # 3.1. Global navigation
+=============================================================================*/
+.nav-global .menu {
+  list-style: none;
+  /*display: flex;*/
+  background-color: #fcfcfc;
+  padding: 0;
+  box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+  margin: 0;
+}
+.nav-global .menu li {
+  display: block;
+  flex-grow: 1;
+  padding: 1em;
+  border-top: 5px solid #e5e5e5;
+}
 
+
+.menu svg { /* this may just be for social menu have to see */
+  height: 2em;
+  width: 2em;
+}
+/*=============================================================================
+# 3. Module
+  # 3.1. Global navigation
+    # 3.1.1. Global navigation - mobile
+=============================================================================*/
+.nav-global.mobile .menu li:first-of-type {
+  border-top: 5px solid #fb4b4e;
+}
+.nav-global.mobile .menu {
+  display: none;
+}
+.mobile-navigation-button {
+  width: 100%;
+  background-color: #fff;
+  border-top: 5px solid #fb4b4e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0px;
+  padding: 1.5em;
+}
+.mobile-navigation-button span {
+  font-size: 2em;
+  margin: 0 0.5em;
+}
 
 /*=============================================================================
 # 3. Module
-  # 3.1 Social navigation
+  # 3.1. Global navigation
+    # 3.1.2. Global navigation - desktop
+=============================================================================*/
+.nav-global.desktop {
+  display: none;
+  grid-column: unset;
+  grid-row: unset;
+}
+.nav-global.desktop .menu {
+  list-style: none;
+  display: flex;
+  background-color: #fcfcfc;
+  padding: 0;
+  box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+  margin: 0;
+}
+.nav-global.desktop .menu li {
+  display: block;
+  flex-grow: 1;
+  padding: 1em;
+  border-top: 5px solid #e5e5e5;
+}
+.nav-global.desktop .menu li:hover, .nav-global  .menu li:active {
+  border-top: 5px solid #fb4b4e;
+}
+/*=============================================================================
+# 3. Module
+  # 3.1. Global header
+=============================================================================*/
+.page-header {
+  grid-template-rows: unset;
+  padding: 1em;
+  border-bottom: 5px solid #07020D;
+  background-color: #fff;
+}
+.page-header h1 {
+  font-size: 2em;
+  margin: 0;
+}
+
+/*=============================================================================
+# 3. Module
+  # 3.3. Social navigation
 =============================================================================*/
 .nav-social .menu {
   list-style: none;
@@ -184,7 +247,7 @@ h1, h2 {
 
 /*=============================================================================
 # 3. Module
-  # 3.2 SVG
+  # 3.4. SVG
 =============================================================================*/
 /* TODO: Does this belong here ??? */
 #menu {
@@ -196,7 +259,7 @@ h1, h2 {
 }
 /*=============================================================================
 # 3. Module
-  # 3.3 Buttons
+  # 3.5. Buttons
 =============================================================================*/
 .button {
   /*font-family: 'Montserrat', sans-serif;
