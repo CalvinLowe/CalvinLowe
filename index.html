@@ -29,6 +29,22 @@
             <li><a href="#">Payment</a></li>
           </ul>
         </nav>
+
+        <nav id="mobile-navigation" class="nav nav-global mobile">
+            <a id="mobile-navigation-button" class="mobile-navigation-button">
+                <svg class="icon">
+                    <use xlink:href="svg/fa-solid.svg#bars"></use>
+                </svg>
+                <span>Menu</span>
+            </a>
+            <ul class="menu">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Payment</a></li>
+            </ul>
+        </nav>
     </header>
     <article class="module" id="about">
       <header class="module-header">
@@ -103,13 +119,14 @@
         </article>
 
         <footer>
-            <nav id="mobile-navigation" class="nav nav-global mobile">
-                <button id="mobile-navigation-button" class="mobile-navigation-button">
+            <!-- TODO: Create small footer menu list -->
+            <nav style="display:none;" id="mobile-navigation" class="nav nav-global mobile">
+                <a id="mobile-navigation-button" class="mobile-navigation-button">
                     <span>Menu</span>
                     <svg class="icon">
                         <use xlink:href="svg/fa-solid.svg#bars"></use>
                     </svg>
-                </button>
+                </a>
                 <ul class="menu">
                     <li><a href="#">About</a></li>
                     <li><a href="#">Portfolio</a></li>
