@@ -1,0 +1,28 @@
+/**
+@author: Calvin Lowe
+@url: https://calvinlowe.com
+@version: 2.0
+@date: 17.05.18
+**/
+
+/*=============================================================================
+#   Base
+=============================================================================*/
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+    margin: 0;
+}
+main {
+    background-color: #e5e5e5;
+    padding: 1rem;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+ul, ol {
+    padding: 0;
+    list-style: none;
+}

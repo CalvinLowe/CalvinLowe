@@ -1,0 +1,33 @@
+/**
+@author: Calvin Lowe
+@url: https://calvinlowe.com
+@date: 17.03.18
+**/
+
+/*=============================================================================
+#   Experimental
+=============================================================================*/
+footer h2 {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  footer h2 span:first-of-type {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    font-size: 3em;
+    text-transform: uppercase;
+    line-height: 1;
+    align-self: center;
+  }
+  footer h2 span:nth-of-type(2) {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    align-self: end;
+  }
+  footer h2 span:nth-of-type(3) {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    align-self: end;
+  }
