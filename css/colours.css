@@ -9,5 +9,8 @@
 =============================================================================*/
 :root {
     --main-dark-colour: #07020D;
+    --main-light-colour: #ffffff;
     --main-accent-colour: #fb4b4e;
+    --twitter: #1da1f2;
+    --github: #323131;
 }

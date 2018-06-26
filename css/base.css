@@ -16,7 +16,6 @@ body {
     margin: 0;
 }
 main {
-    background-color: #e5e5e5;
     padding: 1rem;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -25,4 +24,14 @@ h1, h2, h3, h4, h5, h6 {
 ul, ol {
     padding: 0;
     list-style: none;
+}
+a:link, a:visited {
+    color: #000;
+}
+body {
+    background-color: #e5e5e5;
+    background-image: url("../img/trianglify.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }

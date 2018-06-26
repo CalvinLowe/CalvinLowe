@@ -33,9 +33,9 @@
     grid-column: 1 / 2;
     place-self: center;
 }
-.main__section__header__icon.svg-inline--fa {
-    height: 1.25rem;
-    width: 1.25rem;
+.main__section__header__icon.svg-inline--fa, .profile__social__nav__list .svg-inline--fa {
+    height: 1.5rem;
+    width: 1.5rem;
 }
 .profile__img {
     display: block;
@@ -46,7 +46,16 @@
 .profile__social__nav__list {
   display: flex;
   justify-content: space-evenly;
+  margin: 1rem auto 0 auto;
+  width: 175px;
+}
+.profile__social__nav__list__link:hover .fa-twitter {
+    color: var(--twitter);
+}
+.profile__social__nav__list__link:hover .fa-github {
+    color: var(--github);
 }
 .main__section__text__wrap {
     padding: 1rem;
+    padding-top: 0;
 }
