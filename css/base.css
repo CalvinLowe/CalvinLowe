@@ -8,30 +8,35 @@
 /*=============================================================================
 #   Base
 =============================================================================*/
-* {
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-}
-body {
-    margin: 0;
-}
-main {
-    padding: 1rem;
-}
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
-}
-ul, ol {
-    padding: 0;
-    list-style: none;
-}
-a:link, a:visited {
-    color: #000;
-}
-body {
+.page {
+	margin: 0;
     background-color: #e5e5e5;
     background-image: url("../img/trianglify.svg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+	background-attachment: fixed;
+	font-family: 'Open Sans', sans-serif;
+	box-sizing: border-box;
+}
+.main {
+    padding: 1rem;
+}
+.heading {
+	font-family: 'Montserrat', sans-serif;
+	margin-top: 0;
+	margin-bottom: 1rem;
+	color: var(--secondary-dark-colour);
+}
+.list {
+	padding: 0;
+	margin-bottom: 0;
+    list-style: none;
+}
+.link, .link:visited {
+    color: var(--main-dark-colour);
+}
+@media (min-width: 1000px) {
+	.page {
+		background-image: url("../img/trianglify-large.svg");
+	}
 }

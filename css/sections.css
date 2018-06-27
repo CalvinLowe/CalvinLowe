@@ -7,14 +7,16 @@
 /*=============================================================================
 #   Sections
 =============================================================================*/
-.main__section {
-    color: #07020D;
-    background-color: #fcfcfc;
-    border-top: 5px solid #fb4b4e;
+.section {
+    color: var(--main-dark-colour);
+    background-color: var(--main-light-colour);
+    border-top: 5px solid var(--main-accent-colour);
     box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
     border-radius: 4px 4px 0 0;
+    max-width: 600px;
+    margin-bottom: 1rem;
 }
-.main__section__header {
+.section__header {
     background-color: #f4f4f4;
     border-bottom: 1px solid #e5e5e5;
     margin: 0;
@@ -23,19 +25,16 @@
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr;
 }
-.main__section__header__heading {
+.heading_type_section {
+    margin-top: 1rem;
     grid-column: 1 / 3;
     grid-row: 1 / 2;
     place-self: center;
 }
-.main__section__header__icon {
+.section__header__icon {
     grid-row: 1 / 2;
     grid-column: 1 / 2;
     place-self: center;
-}
-.main__section__header__icon.svg-inline--fa, .profile__social__nav__list .svg-inline--fa {
-    height: 1.5rem;
-    width: 1.5rem;
 }
 .profile__img {
     display: block;
@@ -43,19 +42,28 @@
     margin: auto;
     box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
 }
-.profile__social__nav__list {
+.list_type_social_profile {
   display: flex;
   justify-content: space-evenly;
   margin: 1rem auto 0 auto;
   width: 175px;
 }
-.profile__social__nav__list__link:hover .fa-twitter {
-    color: var(--twitter);
-}
-.profile__social__nav__list__link:hover .fa-github {
-    color: var(--github);
-}
-.main__section__text__wrap {
+
+.section__text_wrap {
     padding: 1rem;
     padding-top: 0;
+}
+/*=============================================================================
+#   Icons
+=============================================================================*/
+.page .svg-inline--fa{
+    color: var(--main-dark-colour);
+    height: 1.5rem;
+    width: 1.5rem;
+}
+.link_type_social:hover .fa-twitter {
+    color: var(--twitter);
+}
+.link_type_social:hover .fa-github {
+    color: var(--github);
 }

@@ -8,9 +8,14 @@
 #   Colors
 =============================================================================*/
 :root {
+    /* Theme colours */
     --main-dark-colour: #07020D;
-    --main-light-colour: #ffffff;
+    --secondary-dark-colour: #140526;
+    --main-light-colour: #fcfcfc;
     --main-accent-colour: #fb4b4e;
+    --secondary-accent-colour: #d8d8f6;
+
+    /* External colours */
     --twitter: #1da1f2;
     --github: #323131;
 }

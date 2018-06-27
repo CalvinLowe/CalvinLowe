@@ -9,14 +9,4 @@
 =============================================================================*/
 .page__header {
     padding: 1rem;
-    background: linear-gradient(-200deg, rgba(245,245,245,.6), rgba(255,0,0,0) 70.71%);
-}
-.page__header__heading {
-    margin-top: 0;
-}
-
-.page__header__nav {
-}
-.page__header__nav__list {
-    margin-bottom: 0;
 }
