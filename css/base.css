@@ -33,8 +33,13 @@
     list-style: none;
 }
 .link, .link:visited {
-    color: var(--main-dark-colour);
+	/* TODO: Disable hover effect on mobile? Detect touch  */
+	/* TODO: What colour should I use for links??? */
+    /*color: var(--secondary-dark-colour);*/
 }
+
+
+
 @media (min-width: 1000px) {
 	.page {
 		background-image: url("../img/trianglify-large.svg");
