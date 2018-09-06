@@ -8,12 +8,18 @@
 #   Footer
 =============================================================================*/
 .page__footer {
-    background-color: var(--main-dark-colour);
-    color: var(--main-light-colour);
-    padding: 1rem;
+    padding: 2rem;
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+}
+.page__footer--reveal {
+    height: 200px;
+    z-index: 1;
 }
 .heading_type_footer {
-	color: var(--main-light-colour);
 	font-weight: 400;
 }
 .page__footer__nav__list {

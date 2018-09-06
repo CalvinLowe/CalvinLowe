@@ -7,12 +7,12 @@
 /*=============================================================================
 #   Grid
 =============================================================================*/
-.grid_type_home {
-    /*display: grid;*/
-    /* TODO: Grid doesn't work with Padding on .main */
-    /*grid-gap: 1rem;*/
-    /*grid-template-columns: 1fr;*/
-}
+/* TODO: Grid doesn't work with Padding on .main */
+/*.grid_type_home {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+}*/
 /*@media (min-width: 800px) {
     .grid_type_home {
         grid-template-columns: 1fr 1fr;
