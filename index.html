@@ -14,6 +14,7 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/state.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/main.css">
@@ -28,7 +29,7 @@
 
 <body class="page home">
     <header class="page__header">
-        <h1 class="heading page__header__heading">Calvin Lowe <span class="page__header__heading__subheading">Web Design & Development</span></h1>
+        <h1 class="heading page__header__heading">Calvin Lowe <span class="page__header__heading__subheading">Web Design &amp; Development</span></h1>
         <nav class="page__header__nav">
             <ul class="list page__header__nav__list">
                 <li><a class="link"href="#">Portfolio</a></li>
@@ -99,9 +100,19 @@
 			</header>
 			<div class="section__wrap">
 				<ul>
-                    <li>Create a header</li>
-                    <li>Create a footer</li>
+                    <li><s>Create a header</s></li>
+                    <li><s>Create a footer</s></li>
                     <li><s>Make the main element of the page overlay both the header and footer, with the footer being revealed as you scroll.</s></li>
+                    <li><s>Add contact form to footer</s></li>
+                    <li>Add short about section to footer</li>
+                    <li>Make footer center aligned and stylish</li>
+                    <li>Make footer-reveal the same height as footer using grid</li>
+                    <li>Separate reveal css into own class</li>
+                    <li>Copy storbrand guys footer contact form</li>
+                    <li>Make form css match section CSS</li>
+                    <li>Give contact form a header like sections</li>
+                    <li>Style navigation</li>
+                    <li>Make all sections have a rounded corners on bottom as well</li>
                 </ul>
 				</figure>
 			</div>
@@ -110,14 +121,33 @@
     </main>
     <footer class="page__footer--reveal"></footer>
     <footer class="page__footer">
-        <h3 class="heading heading_type_footer">Calvin Lowe <span class="page__footer__heading__subheading">Web Design & Development</span></h3>
+        
+        <form class="page__footer__form">
+            <label>Name:
+                <input type="text">
+            </label>
+            <label>Email:
+                <input type="email">
+            </label>
+            <label>Subject:
+                <input type="text">
+            </label>
+            <label>Message:
+                <textarea></textarea>
+            </label>
+            <input type="submit" value="Send message">
+        </form>
+        <h3 class="heading heading_type_footer">Calvin Lowe <span class="page__footer__heading__subheading">Web Design &amp; Development</span></h3>
+        <p>About me blah blah blah blah.</p>
         <nav class="page__footer__nav">
             <ul class="list page__footer__nav__list">
                 <li><a class="link link_type_footer" href="#">Portfolio</a></li>
                 <li><a class="link link_type_footer" href="#">Contact</a></li>
             </ul>
-		</nav>
-		<small>I made this.</small>
+        </nav>
+        <small>I made this.</small>
+        <small>Calvin Lowe Web Design &amp; Development</small>
+        <small>&copy; 2018-current year</small>
     </footer>
 
 </body>

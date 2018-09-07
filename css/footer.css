@@ -9,6 +9,7 @@
 =============================================================================*/
 .page__footer {
     padding: 2rem;
+    text-align: center;
 
     position: fixed;
     bottom: 0;
@@ -16,7 +17,6 @@
     z-index: 2;
 }
 .page__footer--reveal {
-    height: 200px;
     z-index: 1;
 }
 .heading_type_footer {
@@ -27,4 +27,12 @@
 }
 .link_type_footer, .link_type_footer:visited {
     color: var(--main-light-colour);
+}
+
+.page__footer__form {
+    display: grid;
+    grid-gap: 1rem;
+    max-width: 400px;
+    color: var(--main-light-colour);
+    background-color: var(--main-dark-colour);
 }
