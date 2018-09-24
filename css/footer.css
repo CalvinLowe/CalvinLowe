@@ -11,16 +11,17 @@
     padding: 2rem;
     text-align: center;
 
-    position: fixed;
+    /*position: fixed;
     bottom: 0;
     width: 100%;
-    z-index: 2;
+    z-index: 2;*/
 }
 .page__footer--reveal {
     z-index: 1;
 }
 .heading_type_footer {
-	font-weight: 400;
+    font-weight: 400;
+    margin: 1rem;
 }
 .page__footer__nav__list {
     margin-bottom: 0;
@@ -29,10 +30,6 @@
     color: var(--main-light-colour);
 }
 
-.page__footer__form {
-    display: grid;
-    grid-gap: 1rem;
-    max-width: 400px;
-    color: var(--main-light-colour);
-    background-color: var(--main-dark-colour);
+.page__footer__about {
+    display: inline-block;
 }

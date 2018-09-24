@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/state.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/forms.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/sections.css">
@@ -37,7 +38,6 @@
             </ul>
         </nav>
     </header>
-    <header class="page__header--reveal"></header>
     <main class="main home__main grid_type_home">
         <section class="section about">
             <header class="section__header">
@@ -104,15 +104,22 @@
                     <li><s>Create a footer</s></li>
                     <li><s>Make the main element of the page overlay both the header and footer, with the footer being revealed as you scroll.</s></li>
                     <li><s>Add contact form to footer</s></li>
-                    <li>Add short about section to footer</li>
-                    <li>Make footer center aligned and stylish</li>
+                    <li><s>Add short about section to footer</s></li>
+                    <li><s>Make all sections have a rounded corners on bottom as well</s></li>
+                    <li><s>Make footer center aligned and stylish</s></li>
+                    <li><s>Make form css match section CSS</s></li>
                     <li>Make footer-reveal the same height as footer using grid</li>
                     <li>Separate reveal css into own class</li>
                     <li>Copy storbrand guys footer contact form</li>
-                    <li>Make form css match section CSS</li>
                     <li>Give contact form a header like sections</li>
                     <li>Style navigation</li>
-                    <li>Make all sections have a rounded corners on bottom as well</li>
+                    <li>Decide whether to keep the header fixed or not</li>
+                    <li>Design header navigation</li>
+                    <li>Design footer navigation</li>
+                    <li>Add reveal CSS only when scrolling into view - using JavaScript</li>
+                    <li>Fix main grid</li>
+                    <li>Form validation: https://css-tricks.com/form-validation-part-1-constraint-validation-html/</li>
+                    <li>Constraint text-area horizontal area</li>
                 </ul>
 				</figure>
 			</div>
@@ -122,23 +129,25 @@
     <footer class="page__footer--reveal"></footer>
     <footer class="page__footer">
         
-        <form class="page__footer__form">
-            <label>Name:
+        <form class="section form page__footer__form">
+            <header class="section__header">
+                <i class="section__header__icon far fa-envelope"></i>
+                <h2 class="heading heading_type_section">Contact</h2>
+            </header>
+            <div class="form__wrapper">
+                <label>Name:</label>
                 <input type="text">
-            </label>
-            <label>Email:
+                <label>Email:</label>
                 <input type="email">
-            </label>
-            <label>Subject:
+                <label>Subject:</label>
                 <input type="text">
-            </label>
-            <label>Message:
+                <label>Message:</label>
                 <textarea></textarea>
-            </label>
-            <input type="submit" value="Send message">
+                <input type="submit" value="Send message">
+            </div>
         </form>
         <h3 class="heading heading_type_footer">Calvin Lowe <span class="page__footer__heading__subheading">Web Design &amp; Development</span></h3>
-        <p>About me blah blah blah blah.</p>
+        <p class="page__footer__about">Calvin Lowe is a freelance web developer and Master of Information Technology student in Brisbane, Australia.</p>
         <nav class="page__footer__nav">
             <ul class="list page__footer__nav__list">
                 <li><a class="link link_type_footer" href="#">Portfolio</a></li>
@@ -146,7 +155,6 @@
             </ul>
         </nav>
         <small>I made this.</small>
-        <small>Calvin Lowe Web Design &amp; Development</small>
         <small>&copy; 2018-current year</small>
     </footer>
 

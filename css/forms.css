@@ -5,9 +5,13 @@
 **/
 
 /*=============================================================================
-#   Header
+#   Forms
 =============================================================================*/
-.page__header {
-    padding: 2rem;
+.page__footer__form {
+    text-align: left;
 }
-.page__header__heading {}
+.form__wrapper {
+    padding: 0 2rem 2rem 2rem;
+
+    display: grid; 
+}
