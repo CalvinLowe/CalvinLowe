@@ -27,6 +27,7 @@
     min-height: 1.5rem;
     margin-bottom: 1rem;
     font-size: 1rem;
+    padding: 0.25rem;
 }
 .form__input:focus {
     border-radius: 2px;
@@ -48,4 +49,11 @@
     letter-spacing: 0.05rem;
     background: linear-gradient(90deg, var(--primary-accent-colour) 0%, var(--secondary-accent-colour) 100%);
     cursor: pointer;
+    box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+
+}
+
+.button:hover {
+    background: linear-gradient(90deg, var(--secondary-accent-colour) 50%, var(--primary-accent-colour) 100%);
+    box-shadow: unset;
 }

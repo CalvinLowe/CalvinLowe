@@ -17,6 +17,7 @@
     z-index: 2;*/
 }
 .page__footer--reveal {
+    display: none;
     z-index: 1;
 }
 .heading_type_footer {

@@ -99,25 +99,39 @@
 			</header>
 			<div class="section__wrap">
 				<ul>
-                    <li><s>Create a header</s></li>
-                    <li><s>Create a footer</s></li>
-                    <li><s>Make the main element of the page overlay both the header and footer, with the footer being revealed as you scroll.</s></li>
-                    <li><s>Add contact form to footer</s></li>
-                    <li><s>Add short about section to footer</s></li>
-                    <li><s>Make all sections have a rounded corners on bottom as well</s></li>
-                    <li><s>Make footer center aligned and stylish</s></li>
-                    <li><s>Make form css match section CSS</s></li>
+                    <li>Complete
+                        <ul>
+                            <li><s>Create a header</s></li>
+                            <li><s>Create a footer</s></li>
+                            <li><s>Make the main element of the page overlay both the header and footer, with the footer being revealed as you scroll.</s></li>
+                            <li><s>Add contact form to footer</s></li>
+                            <li><s>Add short about section to footer</s></li>
+                            <li><s>Make all sections have a rounded corners on bottom as well</s></li>
+                            <li><s>Make footer center aligned and stylish</s></li>
+                            <li><s>Make form css match section CSS</s></li>
+                            <li><s>Copy storbrand guys footer contact form</s></li>
+                            <li><s>Give contact form a header like sections</s></li>
+                            <li><s>Constraint text-area horizontal area</s></li>
+                            <li><s>Fix icons - they aren't loading</s></li>
+                        </ul>
+                    </li>
 
-                    <li><s>Copy storbrand guys footer contact form</s></li>
-                    <li><s>Give contact form a header like sections</s></li>
+                    <li>Form validation: https://css-tricks.com/form-validation-part-1-constraint-validation-html/</li>
+                    <li>Add id's names and fors to inputs</li>
+                    <li>Style error states on contact form</li>
+                    <li>Style input and textarea text and placehodler text</li>
+                    <li>Style tooltips of form</li>
                     <li>Style navigation</li>
                     <li>Decide whether to keep the header fixed or not</li>
                     <li>Design header navigation</li>
                     <li>Design footer navigation</li>
-                    
+                    <li>Add logo and or favicon</li>
                     <li>Fix main grid</li>
-                    <li>Form validation: https://css-tricks.com/form-validation-part-1-constraint-validation-html/</li>
-                    <li><s>Constraint text-area horizontal area</s></li>
+                    <li>Style links</li>
+                    <li>Style :selction</li>
+                    <li>Fix typography and chose a nice body font</li>
+                    <li>Design a portfolio</li>
+
                     <li>Add reveal CSS only when scrolling into view - using JavaScript</li>
                     <li>Make footer-reveal the same height as footer using grid</li>
                     <li>Separate reveal css into own class</li>
@@ -130,20 +144,42 @@
     <footer class="page__footer--reveal"></footer>
     <footer class="page__footer">
         
-        <form class="section form page__footer__form">
+        <form class="section form page__footer__form validate">
             <header class="section__header">
                 <i class="section__header__icon far fa-envelope"></i>
                 <h2 class="heading heading_type_section">Contact</h2>
             </header>
             <div class="form__wrapper">
+
                 <label class="form__label">Name:</label>
-                <input class="form__input" type="text" placeholder="Enter your first name" required>
+                <input
+                    class="form__input"
+                    type="text"
+                    placeholder="Enter your first name"
+                    minlength="3"
+                    maxlength="12"
+                    required>
+
                 <label class="form__label">Email:</label>
-                <input class="form__input" type="email" placeholder="Enter email address" required>
+                <input 
+                    class="form__input"
+                    type="email"
+                    placeholder="Enter email address"
+                    title="The domain portion of the email address is invalid (the portion after the @)."
+                    pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$"
+                    required>
+
                 <label class="form__label">Subject:</label>
-                <input class="form__input" type="text" placeholder="What is your enquiry about?" required>
+                <input
+                    class="form__input"
+                    type="text" placeholder="What is your enquiry about?"
+                    required>
+
                 <label class="form__label">Message:</label>
-                <textarea class="form__input form__textarea" placeholder="Type your message here!" required></textarea>
+                <textarea
+                    class="form__input form__textarea"
+                    placeholder="Type your message here!"
+                    required></textarea>
                 <input class="button" type="submit" value="Send message">
             </div>
         </form>
@@ -159,5 +195,7 @@
         <small>&copy; 2018-current year</small>
     </footer>
 
+    <!-- Scripts -->
+    <script src="js/validate.js"></script>
 </body>
 </html>
