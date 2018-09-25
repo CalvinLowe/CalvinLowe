@@ -27,7 +27,7 @@
     margin-bottom: 0;
 }
 .link_type_footer, .link_type_footer:visited {
-    color: var(--main-light-colour);
+    color: var(--primary-light-colour);
 }
 
 .page__footer__about {

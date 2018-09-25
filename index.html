@@ -21,9 +21,8 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/sections.css">
-    <link rel="stylesheet" href="css/home.css"
+    <link rel="stylesheet" href="css/home.css">
     
-  
     <!-- Title -->
     <title>Calvin Lowe - Web Design &amp; Development</title>
 </head>
@@ -108,18 +107,20 @@
                     <li><s>Make all sections have a rounded corners on bottom as well</s></li>
                     <li><s>Make footer center aligned and stylish</s></li>
                     <li><s>Make form css match section CSS</s></li>
-                    <li>Make footer-reveal the same height as footer using grid</li>
-                    <li>Separate reveal css into own class</li>
-                    <li>Copy storbrand guys footer contact form</li>
-                    <li>Give contact form a header like sections</li>
+
+                    <li><s>Copy storbrand guys footer contact form</s></li>
+                    <li><s>Give contact form a header like sections</s></li>
                     <li>Style navigation</li>
                     <li>Decide whether to keep the header fixed or not</li>
                     <li>Design header navigation</li>
                     <li>Design footer navigation</li>
-                    <li>Add reveal CSS only when scrolling into view - using JavaScript</li>
+                    
                     <li>Fix main grid</li>
                     <li>Form validation: https://css-tricks.com/form-validation-part-1-constraint-validation-html/</li>
-                    <li>Constraint text-area horizontal area</li>
+                    <li><s>Constraint text-area horizontal area</s></li>
+                    <li>Add reveal CSS only when scrolling into view - using JavaScript</li>
+                    <li>Make footer-reveal the same height as footer using grid</li>
+                    <li>Separate reveal css into own class</li>
                 </ul>
 				</figure>
 			</div>
@@ -135,15 +136,15 @@
                 <h2 class="heading heading_type_section">Contact</h2>
             </header>
             <div class="form__wrapper">
-                <label>Name:</label>
-                <input type="text">
-                <label>Email:</label>
-                <input type="email">
-                <label>Subject:</label>
-                <input type="text">
-                <label>Message:</label>
-                <textarea></textarea>
-                <input type="submit" value="Send message">
+                <label class="form__label">Name:</label>
+                <input class="form__input" type="text" placeholder="Enter your first name" required>
+                <label class="form__label">Email:</label>
+                <input class="form__input" type="email" placeholder="Enter email address" required>
+                <label class="form__label">Subject:</label>
+                <input class="form__input" type="text" placeholder="What is your enquiry about?" required>
+                <label class="form__label">Message:</label>
+                <textarea class="form__input form__textarea" placeholder="Type your message here!" required></textarea>
+                <input class="button" type="submit" value="Send message">
             </div>
         </form>
         <h3 class="heading heading_type_footer">Calvin Lowe <span class="page__footer__heading__subheading">Web Design &amp; Development</span></h3>

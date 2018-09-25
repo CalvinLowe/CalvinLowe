@@ -9,11 +9,11 @@
 =============================================================================*/
 :root {
     /* Theme colours */
-    --main-dark-colour: #07020D;
+    --primary-dark-colour: #07020D;
     --secondary-dark-colour: #140526;
-    --main-light-colour: #fcfcfc;
-    --main-accent-colour: #fb4b4e;
-    --secondary-accent-colour: #d8d8f6;
+    --primary-light-colour: #fcfcfc;
+    --primary-accent-colour: #fb4b4e;
+    --secondary-accent-colour: #ff531a;
 
     /* External colours */
     --twitter: #1da1f2;
