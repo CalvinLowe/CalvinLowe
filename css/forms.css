@@ -9,10 +9,10 @@
 =============================================================================*/
 .page__footer__form {
     text-align: left;
+    margin: 1rem 0 2rem 0;
 }
 .form__wrapper {
     padding: 0 2rem 2rem 2rem;
-
     display: grid; 
 }
 

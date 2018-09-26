@@ -8,7 +8,7 @@
 /*=============================================================================
 #   Base
 =============================================================================*/
-p, small {
+p {
 	max-width: var(--text-width);
 }
 .page {
@@ -32,7 +32,6 @@ p, small {
 }
 .list {
 	padding: 0;
-	margin-bottom: 0;
     list-style: none;
 }
 .link, .link:visited {
@@ -40,8 +39,6 @@ p, small {
 	/* TODO: What colour should I use for links??? */
     /*color: var(--secondary-dark-colour);*/
 }
-
-
 
 @media (min-width: 1000px) {
 	.page {

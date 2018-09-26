@@ -7,7 +7,19 @@
 /*=============================================================================
 #   Layout
 =============================================================================*/
-.page {
+.page-grid {
     display: grid;
-    grid-template-rows: auto auto minmax(200px, 500px);
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+    align-items: start;
+    justify-content: center;
+}
+
+.footer-grid {
+    display: grid;
+    justify-content: center;
 }

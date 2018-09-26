@@ -10,11 +10,10 @@
 .section {
     color: var(--primary-dark-colour);
     background-color: var(--primary-light-colour);
-    border-top: 5px solid var(--primary-accent-colour);
+    border-top: 4px solid var(--primary-accent-colour);
     box-shadow: 0 4px 6px 6px rgba(0,0,0,0.2);
     border-radius: 4px;
     max-width: var(--text-width);
-    margin-bottom: 1rem;
 }
 .section__header {
     background-color: #f4f4f4;
@@ -66,4 +65,11 @@
 }
 .link_type_social:hover .fa-github {
     color: var(--github);
+}
+
+/*=============================================================================
+#   TODO
+=============================================================================*/
+.completed li {
+    text-decoration: line-through;
 }

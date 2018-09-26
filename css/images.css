@@ -1,16 +1,19 @@
 /**
 @author: Calvin Lowe
 @url: https://calvinlowe.com
-@date: 17.03.18
+@date: 26.03.18
 **/
 
 /*=============================================================================
-#   Header
+#   Images
 =============================================================================*/
-.page__header {
-    padding: 2rem;
-    text-align: center;
+.img--circle {
+    display: block;
+    border-radius: 50%;
+    margin: auto;
+    box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
 }
-.page__header__heading {
-    margin: 1rem 0;
+
+.profile__img {
+
 }

@@ -24,13 +24,6 @@
     font-weight: 400;
     margin: 1rem;
 }
-.page__footer__nav__list {
-    margin-bottom: 0;
-}
-.link_type_footer, .link_type_footer:visited {
-    color: var(--primary-light-colour);
-}
-
 .page__footer__about {
     display: inline-block;
 }

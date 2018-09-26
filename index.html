@@ -20,24 +20,38 @@
     <link rel="stylesheet" href="css/forms.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/images.css">
+    <link rel="stylesheet" href="css/links.css">
     <link rel="stylesheet" href="css/sections.css">
-    <link rel="stylesheet" href="css/home.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
     
     <!-- Title -->
     <title>Calvin Lowe - Web Design &amp; Development</title>
 </head>
 
-<body class="page home">
+<body class="page page-grid home">
     <header class="page__header">
+        <img class="img--circle profile__img" alt="Calvin Lowe" src="img/cwl_400x400.jpg" width="175" height="175">
         <h1 class="heading page__header__heading">Calvin Lowe <span class="page__header__heading__subheading">Web Design &amp; Development</span></h1>
         <nav class="page__header__nav">
             <ul class="list page__header__nav__list">
-                <li><a class="link"href="#">Portfolio</a></li>
-                <li><a class="link"href="#">Contact</a></li>
+                <li><a class="link link_type_header"href="#">Portfolio</a></li>
+                <li><a class="link link_type_header"href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <main class="main home__main grid_type_home">
+    <main class="main home__main main-grid">
+            <section class="section about">
+                    <header class="section__header">
+                        <i class="section__header__icon fas fa-tasks"></i>
+                        <h2 class="heading heading_type_section">Current Status</h2>
+                    </header>
+                    <div class="section__wrap">
+                        <p>Currently working through the todo list.</p>
+                    </div>
+                </section>
         <section class="section about">
             <header class="section__header">
                 <i class="section__header__icon fas fa-user"></i>
@@ -45,7 +59,7 @@
             </header>
 
             <aside class="main__section__aside profile">
-                <img class="profile__img" alt="Calvin Lowe" src="img/CalvinLoweProfile_1000x1000.jpg" width="175" height="175">
+                <img class="img--circle  profile__img" alt="Calvin Lowe" src="img/CalvinLoweProfile_1000x1000.jpg" width="175" height="175">
                 <nav class="">
                     <ul class="list list_type_social_profile">
                         <li>
@@ -100,33 +114,29 @@
 			<div class="section__wrap">
 				<ul>
                     <li>Complete
-                        <ul>
-                            <li><s>Create a header</s></li>
-                            <li><s>Create a footer</s></li>
-                            <li><s>Make the main element of the page overlay both the header and footer, with the footer being revealed as you scroll.</s></li>
-                            <li><s>Add contact form to footer</s></li>
-                            <li><s>Add short about section to footer</s></li>
-                            <li><s>Make all sections have a rounded corners on bottom as well</s></li>
-                            <li><s>Make footer center aligned and stylish</s></li>
-                            <li><s>Make form css match section CSS</s></li>
-                            <li><s>Copy storbrand guys footer contact form</s></li>
-                            <li><s>Give contact form a header like sections</s></li>
-                            <li><s>Constraint text-area horizontal area</s></li>
-                            <li><s>Fix icons - they aren't loading</s></li>
+                        <ul class="completed">
+                            <li>Create a header</li>
+                            <li>Create a footer</li>
+                            <li>Make the main element of the page overlay both the header and footer, with the footer being revealed as you scroll.</li>
+                            <li>Add contact form to footer</li>
+                            <li>Add short about section to footer</li>
+                            <li>Make all sections have a rounded corners on bottom as well</li>
+                            <li>Make footer center aligned and stylish</li>
+                            <li>Make form css match section CSS</li>
+                            <li>Copy storbrand guys footer contact form</li>
+                            <li>Give contact form a header like sections</li>
+                            <li>Constraint text-area horizontal area</li>
+                            <li>Fix icons - they aren't loading</li>
+                            <li>Decide whether to keep the header fixed or not</li>
+                            <li>Fix main grid</li>
                         </ul>
                     </li>
 
-                    <li>Form validation: https://css-tricks.com/form-validation-part-1-constraint-validation-html/</li>
-                    <li>Add id's names and fors to inputs</li>
-                    <li>Style error states on contact form</li>
-                    <li>Style input and textarea text and placehodler text</li>
-                    <li>Style tooltips of form</li>
+
                     <li>Style navigation</li>
-                    <li>Decide whether to keep the header fixed or not</li>
                     <li>Design header navigation</li>
                     <li>Design footer navigation</li>
                     <li>Add logo and or favicon</li>
-                    <li>Fix main grid</li>
                     <li>Style links</li>
                     <li>Style :selction</li>
                     <li>Fix typography and chose a nice body font</li>
@@ -135,6 +145,15 @@
                     <li>Add reveal CSS only when scrolling into view - using JavaScript</li>
                     <li>Make footer-reveal the same height as footer using grid</li>
                     <li>Separate reveal css into own class</li>
+                    <li>Forms:
+                        <ul>
+                            <li>Form validation: https://css-tricks.com/form-validation-part-1-constraint-validation-html/</li>
+                            <li>Add id's names and fors to inputs</li>
+                            <li>Style error states on contact form</li>
+                            <li>Style input and textarea text and placehodler text</li>
+                            <li>Style tooltips of form</li>
+                        </ul>
+                    </li>
                 </ul>
 				</figure>
 			</div>
@@ -142,7 +161,7 @@
         
     </main>
     <footer class="page__footer--reveal"></footer>
-    <footer class="page__footer">
+    <footer class="page__footer footer-grid">
         
         <form class="section form page__footer__form validate">
             <header class="section__header">
@@ -183,6 +202,7 @@
                 <input class="button" type="submit" value="Send message">
             </div>
         </form>
+        <img class="img--circle profile__img" alt="Calvin Lowe" src="img/cwl_400x400.jpg" width="175" height="175">
         <h3 class="heading heading_type_footer">Calvin Lowe <span class="page__footer__heading__subheading">Web Design &amp; Development</span></h3>
         <p class="page__footer__about">Calvin Lowe is a freelance web developer and Master of Information Technology student in Brisbane, Australia.</p>
         <nav class="page__footer__nav">
