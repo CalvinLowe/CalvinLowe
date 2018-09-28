@@ -8,6 +8,10 @@
 /*=============================================================================
 #   Base
 =============================================================================*/
+* , *:before, *:after { 
+	box-sizing:border-box; 
+}
+
 p {
 	max-width: var(--text-width);
 }
@@ -19,7 +23,7 @@ p {
     background-repeat: no-repeat;
 	background-attachment: fixed;
 	font-family: 'Lato', sans-serif;
-	box-sizing: border-box;
+	
 }
 .main {
     padding: 1rem;

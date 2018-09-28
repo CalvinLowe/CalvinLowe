@@ -13,7 +13,6 @@
     border-top: 4px solid var(--primary-accent-colour);
     box-shadow: 0 4px 6px 6px rgba(0,0,0,0.2);
     border-radius: 4px;
-    max-width: var(--text-width);
 }
 .section__header {
     background-color: #f4f4f4;

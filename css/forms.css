@@ -13,7 +13,8 @@
 }
 .form__wrapper {
     padding: 0 2rem 2rem 2rem;
-    display: grid; 
+    display: grid;
+    
 }
 
 .form__label {

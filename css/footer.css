@@ -8,9 +8,9 @@
 #   Footer
 =============================================================================*/
 .page__footer {
-    padding: 2rem;
+    padding: 2rem 1rem;
     text-align: center;
-
+    overflow: hidden; /* .form__wrapper & .form__input padding are causing horizontal overflow
     /*position: fixed;
     bottom: 0;
     width: 100%;
