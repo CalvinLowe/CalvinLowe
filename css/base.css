@@ -8,6 +8,9 @@
 /*=============================================================================
 #   Base
 =============================================================================*/
+* {
+	/*font-family: 'Montserrat', sans-serif;*/
+}
 p {
 	max-width: var(--text-width);
 }
@@ -29,6 +32,7 @@ p {
 	margin-top: 0;
 	margin-bottom: 1rem;
 	color: var(--secondary-dark-colour);
+	text-shadow: 0 5px 5px rgba(0,0,0,0.2);
 }
 .list {
 	padding: 0;

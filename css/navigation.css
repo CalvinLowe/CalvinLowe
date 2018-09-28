@@ -1,0 +1,22 @@
+/**
+@author: Calvin Lowe
+@url: https://calvinlowe.com
+@date: 28.09.18
+**/
+
+/*=============================================================================
+#   Navigation
+=============================================================================*/
+.navigation__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.page__header .navigation__list {
+    margin: 0;
+}
+
+.navigation__list__item {
+    margin: 0 1rem;
+}
