@@ -8,9 +8,6 @@
 /*=============================================================================
 #   Base
 =============================================================================*/
-* {
-	/*font-family: 'Montserrat', sans-serif;*/
-}
 p {
 	max-width: var(--text-width);
 }
@@ -21,7 +18,7 @@ p {
     background-size: cover;
     background-repeat: no-repeat;
 	background-attachment: fixed;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Lato', sans-serif;
 	box-sizing: border-box;
 }
 .main {
