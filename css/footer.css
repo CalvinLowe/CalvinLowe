@@ -10,19 +10,25 @@
 .page__footer {
     padding: 2rem 1rem;
     text-align: center;
-    overflow: hidden; /* .form__wrapper & .form__input padding are causing horizontal overflow
-    /*position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 2;*/
+    overflow: hidden; /* .form__wrapper & .form__input padding are causing horizontal overflow */
 }
-.page__footer--reveal {
-    display: none;
-    z-index: 1;
-}
-.heading_type_footer {
+.page__footer__heading {
     margin: 1rem;
+    text-shadow: 0 5px 5px rgba(0,0,0,0.2);
 }
 .page__footer__about {
     display: inline-block;
+}
+/* Footer reveal */
+.main, .page__header {
+    z-index: 2;
+}
+/* Toggle these on using JS */
+.page__footer--reveal {
+    position: sticky;
+    bottom: -400px;
+    z-index: 1;
+}
+.page__footer--visually-hidden {
+    visibility: hidden;
 }
