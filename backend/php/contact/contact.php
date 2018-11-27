@@ -3,13 +3,35 @@
  * Creates an contact for entry in the database.
  */
 
-//session_start();
+session_start();
 
-// Database
-//include_once("inc/database.php");
+// Includes
+include("inc/config.php");
+include("class/Entry.php");
 
 // Get the json data from the form body
 //$json = file_get_contents('php://input');
+
+// TODO: Use fetch/ajax/ on the form
+$first_name = $_POST["first_name"];
+$email_address = $_POST["email_address"];
+$message_subject = $_POST["message_subject"];
+$message = $_POST["message"];
+
+// Database values
+$db_host = DB_HOST;
+$db_name = DB_NAME;
+$db_username = DB_USERNAME;
+$db_password = DB_PASSWORD;
+
+// Create database connection
+$db = new MyPDO('mysql:host='.$db_host.';dbname='.$db_name.';charset=utf8', $db_username, $db_password);
+
+// Create entry object
+$entry = new Entry($db);
+
+// Insert values into entry
+$entry->insert($first_name, $email_address, $message_subject, $message);
 
 // Call the form validator
 /*if (isset($json)) {
@@ -94,22 +116,4 @@
     $dbConnection = null; // disconnect the database & exit
     exit();
 }*/
-
-include("inc/config.php");
-include("class/MyPDO.php");
-//include("class/Entry.php");
-
-$hostname = DB_HOST;
-$dbname = DB_NAME;
-$username = DB_USERNAME;
-$password = DB_PASSWORD;
-
-echo $_POST;
-
-$mypdo = new MyPDO('mysql:host='.$hostname.';dbname='.$dbname.';charset=utf8', $username, $password);
-
-
-//$entry = new Entry($mypdo);
-//$entry->insert($first_name, $email_addres, $subject_message, $message);
-
 ?>

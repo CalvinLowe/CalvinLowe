@@ -178,8 +178,12 @@
             </header>
             <div class="form__wrapper">
 
-                <label class="form__label">Name:</label>
+                <label
+                    class="form__label"
+                    for="first_name">Name:</label>
                 <input
+                    name="first_name"
+                    id="first_name"
                     class="form__input"
                     type="text"
                     placeholder="Enter your first name"
@@ -187,8 +191,12 @@
                     maxlength="12"
                     required>
 
-                <label class="form__label">Email:</label>
-                <input 
+                <label
+                    class="form__label"
+                    for="email_address">Email:</label>
+                <input
+                    name="email_address"
+                    id="email_address"
                     class="form__input"
                     type="email"
                     placeholder="Enter email address"
@@ -196,14 +204,22 @@
                     pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$"
                     required>
 
-                <label class="form__label">Subject:</label>
+                <label
+                    class="form__label"
+                    for="message_subject">Subject:</label>
                 <input
+                    name="message_subject"
+                    id="message_subject"
                     class="form__input"
                     type="text" placeholder="What is your enquiry about?"
                     required>
 
-                <label class="form__label">Message:</label>
+                <label
+                    class="form__label"
+                    for="message">Message:</label>
                 <textarea
+                    name="message"
+                    id="message"
                     class="form__input form__textarea"
                     placeholder="Type your message here!"
                     required></textarea>

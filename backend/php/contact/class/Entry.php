@@ -2,6 +2,9 @@
 /**
  * A class representing a contact form entry on calvinlowe.com
  */
+
+include("class/MyPDO.php"); 
+
 class Entry {
 
 	/* @var MyPDO */
@@ -26,12 +29,12 @@ class Entry {
 	 * @param subject_message
 	 * @param message
 	 */
-	public function insert($first_name, $email_addres, $subject_message, $message) {
+	public function insert($first_name, $email_address, $message_subject, $message) {
 
-		$this->db->run(
-						"INSERT INTO entry (first_name, email_address, subject_message, message)
-						VALUES (:first_name, :email_address, :subject_mesage, :message);"
-					);
+		$sql = "INSERT INTO entry (first_name, email_address, message_subject, message)
+				  VALUES (:first_name, :email_address, :message_subject, :message);";
+
+		$this->db->run($sql, [$first_name, $email_address, $message_subject, $message]);
 	}
 }
 ?>
