@@ -1,6 +1,7 @@
 <?PHP
 /**
  * Creates an contact for entry in the database.
+ * @author Calvin Lowe <calvin@calvinlowe.com>
  */
 
 session_start();
@@ -8,15 +9,6 @@ session_start();
 // Includes
 include("inc/config.php");
 include("class/Entry.php");
-
-// Get the json data from the form body
-//$json = file_get_contents('php://input');
-
-// TODO: Use fetch/ajax/ on the form
-$first_name = $_POST["first_name"];
-$email_address = $_POST["email_address"];
-$message_subject = $_POST["message_subject"];
-$message = $_POST["message"];
 
 // Database values
 $db_host = DB_HOST;
@@ -27,11 +19,17 @@ $db_password = DB_PASSWORD;
 // Create database connection
 $db = new MyPDO('mysql:host='.$db_host.';dbname='.$db_name.';charset=utf8', $db_username, $db_password);
 
-// Create entry object
-$entry = new Entry($db);
 
-// Insert values into entry
-$entry->insert($first_name, $email_address, $message_subject, $message);
+// Get the json data from the form body
+//$json = file_get_contents('php://input');
+
+// TODO: Use fetch/ajax/ on the form
+$first_name = $_POST["first_name"];
+$email_address = $_POST["email_address"];
+$message_subject = $_POST["message_subject"];
+$message = $_POST["message"];
+
+
 
 // Call the form validator
 /*if (isset($json)) {
@@ -116,4 +114,11 @@ $entry->insert($first_name, $email_address, $message_subject, $message);
     $dbConnection = null; // disconnect the database & exit
     exit();
 }*/
+
+
+// Create entry object
+$entry = new Entry($db);
+
+// Insert values into entry
+$entry->insert($first_name, $email_address, $message_subject, $message);
 ?>

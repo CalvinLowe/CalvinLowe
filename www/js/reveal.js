@@ -4,7 +4,7 @@ var ticking = false;
 
 function doSomething(scroll_pos) {
   // do something with the scroll position
-  console.log(scroll_pos);
+  //console.log(scroll_pos);
 }
 
 window.addEventListener('scroll', function(e) {
