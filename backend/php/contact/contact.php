@@ -19,14 +19,13 @@ $db_password = DB_PASSWORD;
 // Create database connection
 $db = new MyPDO('mysql:host='.$db_host.';dbname='.$db_name.';charset=utf8', $db_username, $db_password);
 
-
 // Get the json data from the form body
-//$json = file_get_contents('php://input');
+$json = file_get_contents('php://input');
 
 // TODO: Use fetch/ajax/ on the form
-$first_name = $_POST["first_name"];
-$email_address = $_POST["email_address"];
-$message_subject = $_POST["message_subject"];
+$name = $_POST["name"];
+$email = $_POST["email"];
+$subject = $_POST["subject"];
 $message = $_POST["message"];
 
 
@@ -120,5 +119,5 @@ $message = $_POST["message"];
 $entry = new Entry($db);
 
 // Insert values into entry
-$entry->insert($first_name, $email_address, $message_subject, $message);
+$entry->insert($name, $email, $subject, $message);
 ?>

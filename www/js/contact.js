@@ -1,24 +1,37 @@
+// URL to send the request to
 var url = "../../backend/php/contact/contact.php";
-//Users/calvinlowe/Developer/WebDevProjects/CalvinLowe/backend/php/contact/contact.php
-///Users/calvinlowe/Developer/WebDevProjects/CalvinLowe/www/js/contact.js
-// TODO: define msg object from grabbing from contact form.. after validation??
 
-// Test vars..
-var name = "Calvin";
-var email = "calvinwlowe@gmail.com";
-var subject = "New job";
-var message = "Hey man this is a test message";
+// Add event handler to submit button
+var submit = document.getElementById("submit");
+submit.addEventListener("click", submitMessage);
 
-msg = new Message(name, email, subject, message);
+// Form values
+let name;
+let email;
+let subject;
+let message;
 
-msg.send(url)
-.then(response => { // success arrow function
-					console.log(JSON.stringify(response));
+function submitMessage (event) {
+	getFormValues();
+	msg = new Message(name, email, subject, message);
+	msg.send(url)
+	.then(response => { // success arrow function
+					console.log(response);
+					/*console.log(JSON.stringify(response));
 					if (response.response === 'failure') {
 						// do something
 					} else if (response.response === 'success') {
 						// do something else
-					}
+					}*/
 				})
-.catch(error => console.error(error));
+	.catch(error => console.error(error));
+	event.preventDefault();
+}
 
+// Get values from form inputs
+function getFormValues() {
+	name = document.getElementById("name").value;
+	email = document.getElementById("email").value;
+	subject = document.getElementById("subject").value;
+	message = document.getElementById("message").value;
+}
