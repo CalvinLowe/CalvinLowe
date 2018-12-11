@@ -22,21 +22,12 @@ $db = new MyPDO('mysql:host='.$db_host.';dbname='.$db_name.';charset=utf8', $db_
 // Get the json data from the form body
 $json = file_get_contents('php://input');
 
-// TODO: Use fetch/ajax/ on the form
-$name = $_POST["name"];
-$email = $_POST["email"];
-$subject = $_POST["subject"];
-$message = $_POST["message"];
-
-
-
 // Call the form validator
-/*if (isset($json)) {
-    $error = validateRegistrationForm($json);
-}*/
+if (isset($json)) {
+    $error = validateRegistrationForm($json, $db);
+}
 
-// TODO: Comments
-/*function validateRegistrationForm($json) {
+function validateRegistrationForm($json, $db) {
 
     // Convert the json form data to an array
     $data = json_decode($json, true);
@@ -47,77 +38,48 @@ $message = $_POST["message"];
     );
 
     // Check if all data fields are set.
-    if (!isset($data['firstName'])) {
-        $response['message'] = 'Please enter your first name.';
-        return json_encode($response);
-    } else if (!isset($data['lastName'])) {
-        $response['message'] = 'Please enter your last name.';
-        return json_encode($response);
-    } else if (!isset($data['affiliation'])) {
-        $response['message'] = 'Please enter your organisation name.';
-        return json_encode($response);
-    } else if (!isset($data['email'])) {
+    if (!$data['name']) {
+		$response['response'] = 'failure';
+        $response['message'] = 'Please enter your name.';
+    } else if (!$data['subject']) {
+		$response['response'] = 'failure';
+		$response['message'] = 'Please enter a subject for your message';
+    } else if (!$data['message']) {
+		$response['response'] = 'failure';
+		$response['message'] = 'Please enter your message';
+	} else if (!$data['email']) {
+		$response['response'] = 'Failure';
         $response['message'] = 'Please enter your email address.';
-        return json_encode($response);
-    } else if (!isset($data['password'])) {
-        $response['message'] = 'Please enter a password.';
-        return json_encode($response);
     } else if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
+		$response['response'] = 'Failure';
         $response['message'] = 'Please enter a valid email address.';
-        return json_encode($response);
-    } else if (strlen($data['password']) < 12) {
-        $response['message'] = 'Your password must have at least 12 characters.';
-        return json_encode($response);
     } else {
+		
         // No errors set all variables
         // Cleans validates and assign variables from the $data array
-        $firstName = filter_var($data['firstName'], FILTER_SANITIZE_STRING);
-        $lastName = filter_var($data['lastName'], FILTER_SANITIZE_STRING);
-        $affiliation = filter_var($data['affiliation'], FILTER_SANITIZE_STRING);
-        $email = filter_var($data['email'], FILTER_SANITIZE_EMAIL);
-        $password = password_hash($data['password'], PASSWORD_DEFAULT); // Hash the password
-
         // Set the session variables so other that variables can be accessed outside of this function
-        // and in other files.
-        $_SESSION['firstName'] = $firstName;
-        $_SESSION['lastName'] = $lastName;
-        $_SESSION['affiliation'] = $affiliation;
-        $_SESSION['email'] = $email;
-        $_SESSION['password'] = $password; // TODO: encode password hash and salt?
-    }
-}*/
+		// and in other files.
+        $name = filter_var($data['name'], FILTER_SANITIZE_STRING);
+        $subject = filter_var($data['subject'], FILTER_SANITIZE_STRING);
+        $message = filter_var($data['message'], FILTER_SANITIZE_STRING);
+		$email = filter_var($data['email'], FILTER_SANITIZE_EMAIL);
+		
+		// Create entry object
+		$entry = new Entry($db);
 
-// Send the error message as a response
-// JavaScript will have to parse this and display it as appropriate
-/*if (isset($error) && $error) {
-    echo $error;
-} else {
-    // No error time to send the db request
-    try {
-        $_SESSION['id'] = insert($dbConnection, $_SESSION['firstName'], $_SESSION['lastName'], $_SESSION['affiliation'], $_SESSION['email'], $_SESSION['password']);
-    } catch (PDOException $e) {
-        $response['response'] = 'failure';
-        $response['message'] = $e->getMessage();
-    }
-    if (isset($_SESSION['id'])) {
-        // Record the success message
-        $response['response'] = 'success';
-        $response['message'] = 'Registration successful.';
-    } else {
-        $response['response'] = 'failure';
-        $response['message'] = 'Could not create account.';
-    }
+		// Insert values into entry
+		$entry->insert($name, $email, $subject, $message);
 
-    echo json_encode($response);
+		// Set the successful response message
+		$response['response'] = 'Success';
+		$response['message'] = 'Message sent.';
+	}
 
-    $dbConnection = null; // disconnect the database & exit
-    exit();
-}*/
+	// Send the response to the client
+	echo json_encode($response);
 
-
-// Create entry object
-$entry = new Entry($db);
-
-// Insert values into entry
-$entry->insert($name, $email, $subject, $message);
+	// disconnect the database & exit
+	$db = null;
+	exit();
+}
 ?>
