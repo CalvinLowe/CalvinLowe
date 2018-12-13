@@ -41,34 +41,35 @@ function validateRegistrationForm($json, $db) {
     if (!$data['name']) {
 		$response['response'] = 'failure';
         $response['message'] = 'Please enter your name.';
-    } else if (!$data['subject']) {
-		$response['response'] = 'failure';
-		$response['message'] = 'Please enter a subject for your message';
-    } else if (!$data['message']) {
-		$response['response'] = 'failure';
-		$response['message'] = 'Please enter your message';
 	} else if (!$data['email']) {
 		$response['response'] = 'Failure';
         $response['message'] = 'Please enter your email address.';
     } else if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
 		$response['response'] = 'Failure';
-        $response['message'] = 'Please enter a valid email address.';
+		$response['message'] = 'Please enter a valid email address.';
+	} else if (!$data['subject']) {
+		$response['response'] = 'failure';
+		$response['message'] = 'Please enter a subject for your message';
+	} else if (!$data['message']) {
+		$response['response'] = 'failure';
+		$response['message'] = 'Please enter your message';
     } else {
 		
         // No errors set all variables
         // Cleans validates and assign variables from the $data array
         // Set the session variables so other that variables can be accessed outside of this function
 		// and in other files.
-        $name = filter_var($data['name'], FILTER_SANITIZE_STRING);
+		$name = filter_var($data['name'], FILTER_SANITIZE_STRING);
+		$email = filter_var($data['email'], FILTER_SANITIZE_EMAIL);
         $subject = filter_var($data['subject'], FILTER_SANITIZE_STRING);
         $message = filter_var($data['message'], FILTER_SANITIZE_STRING);
-		$email = filter_var($data['email'], FILTER_SANITIZE_EMAIL);
 		
 		// Create entry object
 		$entry = new Entry($db);
 
 		// Insert values into entry
 		$entry->insert($name, $email, $subject, $message);
+		// TODO: Send email
 
 		// Set the successful response message
 		$response['response'] = 'Success';

@@ -114,6 +114,30 @@
 			</header>
 			<div class="section__wrap">
 				<ul>
+                    <li>Forms:
+                        <ul>
+                            <li>Form validation: https://css-tricks.com/form-validation-part-1-constraint-validation-html/</li>
+                            <li>link form validation to php json return messages..</li>
+                            <li>Add id's names and fors to inputs</li>
+                            <li>Style error states on contact form</li>
+                            <li>Style input and textarea text and placehodler text</li>
+                            <li>Style tooltips of form</li>
+                            <li>Add success styles to sent form. - Force reload to send a new form..</li>
+                            <li>Send an email: http://php.net/manual/en/function.mail.php https://stackoverflow.com/questions/45997623/how-to-test-php-send-mail-on-local-server-with-mamp-pro</li>
+                            <li>Add email/spam fields to database..</li>
+                        </ul>
+                    </li>
+                    <li>Add reveal CSS only when scrolling into view - using JavaScript</li>
+                    <li>Make footer-reveal the same height as footer using grid</li>
+                    <li>Separate reveal css into own class</li>
+                    <li>Write an app that lets me update my status on my website..</li>
+
+                    <li>Rewrite about section</li>
+                    <li>Design a portfolio</li>
+                    <li>Set up navigation links</li>
+                    <li>Style links</li>
+                    <li>Style body typography</li>
+                    <li>Design a portfolio</li>
                     <li>Complete
                         <ul class="completed">
                             <li>Create a header</li>
@@ -139,30 +163,6 @@
                             <li>Fix mobile grid</li>
                         </ul>
                     </li>
-
-
-
-                    
-    
-                    
-                    <li>Add reveal CSS only when scrolling into view - using JavaScript</li>
-                    <li>Make footer-reveal the same height as footer using grid</li>
-                    <li>Separate reveal css into own class</li>
-                    <li>Forms:
-                        <ul>
-                            <li>Form validation: https://css-tricks.com/form-validation-part-1-constraint-validation-html/</li>
-                            <li>Add id's names and fors to inputs</li>
-                            <li>Style error states on contact form</li>
-                            <li>Style input and textarea text and placehodler text</li>
-                            <li>Style tooltips of form</li>
-                        </ul>
-                    </li>
-                    <li>Rewrite about section</li>
-                    <li>Design a portfolio</li>
-                    <li>Set up navigation links</li>
-                    <li>Style links</li>
-                    <li>Style body typography</li>
-                    <li>Design a portfolio</li>
                 </ul>
 				</figure>
 			</div>
@@ -177,7 +177,6 @@
                 <h2 class="heading heading_type_section">Contact</h2>
             </header>
             <div class="form__wrapper">
-
                 <label
                     class="form__label"
                     for="name">Name:</label>
@@ -224,6 +223,11 @@
                     placeholder="Type your message here!"
                     required></textarea>
                 <input id="submit" class="button" type="submit" value="Send message">
+                <p class="form__response form__error form__success">
+                    <i class="fas fa-check"></i>
+                    <i class="fas fa-times"></i>
+                    Error message. form__response, form__error, form__success
+                </p>
             </div>
         </form>
         <img class="img--circle profile__img" alt="Calvin Lowe" src="img/cwl_400x400.jpg" width="175" height="175">

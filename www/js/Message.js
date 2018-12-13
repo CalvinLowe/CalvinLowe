@@ -34,7 +34,7 @@ class Message {
 			referrer: "no-referrer", // no-referrer, *client
 			body: JSON.stringify(data), // body data type must match "Content-Type" header
 		})
-		.then(response => response.text()); // parse response to text - useful for debugging
-		//.then(response => response.json()); // parses response to JSON
+		//.then(response => response.text()); // parse response to text - useful for debugging
+		.then(response => response.json()); // parses response to JSON
 	}
 }
