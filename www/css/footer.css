@@ -12,13 +12,6 @@
     text-align: center;
     overflow: hidden; /* .form__wrapper & .form__input padding are causing horizontal overflow */
 }
-.page__footer__heading {
-    margin: 1rem;
-    text-shadow: 0 5px 5px rgba(0,0,0,0.2);
-}
-.page__footer__about {
-    display: inline-block;
-}
 /* Footer reveal */
 .main, .page__header {
     z-index: 2;
