@@ -12,17 +12,8 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/state.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/navigation.css">
-    <link rel="stylesheet" href="css/forms.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/images.css">
-    <link rel="stylesheet" href="css/links.css">
     <link rel="stylesheet" href="css/sections.css">
 
     <!-- Favicon -->
@@ -32,60 +23,27 @@
     <title>Calvin W. Lowe</title>
 </head>
 
-<body class="page page-grid home">
+<body class="page">
     <header class="page__header">
-        <img class="img--circle profile__img" alt="Calvin Lowe" src="img/cwl_400x400.jpg" width="175" height="175">
-        <h1 class="heading page__header__heading">Calvin W. Lowe</h1>
         <nav class="navigation">
             <ul class="list navigation__list">
                 <li class="navigation__list__item"><a class="link link_nav"href="#">Home</a></li>
+                <li class="navigation__list__item"><a class="link link_nav"href="#">About</a></li>
                 <li class="navigation__list__item"><a class="link link_nav"href="#">Projects</a></li>
             </ul>
         </nav>
+        <h1 class="heading page__header__heading">Calvin W. Lowe</h1>
     </header>
-    <main class="main home__main main-grid">
-            <section class="section about">
-                    <header class="section__header">
-                        <i class="section__header__icon fas fa-tasks"></i>
-                        <h2 class="heading heading_type_section">Current Status</h2>
-                    </header>
-                    <div class="section__wrap">
-                        <p>Currently working through the todo list.</p>
-                    </div>
-                </section>
+    <main class="main home__main">
         <section class="section about">
             <header class="section__header">
-                <i class="section__header__icon fas fa-user"></i>
-                <h2 class="heading heading_type_section">About Calvin</h2>
+                <i class="section__header__icon fas fa-tasks"></i>
+                <h2 class="heading heading_type_section">Current Status</h2>
             </header>
-
-            <aside class="main__section__aside profile">
-                <img class="img--circle  profile__img" alt="Calvin Lowe" src="img/CalvinLoweProfile_1000x1000.jpg" width="175" height="175">
-                <nav class="">
-                    <ul class="list list_type_social_profile">
-                        <li>
-                            <a class="link profile__social__nav__list__link" title="Calvin's GitHub profile" href="https://github.com/CalvinLowe">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="link link_type_social" title="Calvin's Twitter profile" href="https://twitter.com/calvinwlowe">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="link link_type_social" title="Calvin's Codepen profile" href="https://codepen.io/clwebdev/#">
-                                <i class="fab fa-codepen"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </aside>
             <div class="section__wrap">
+                <p>Currently working through the todo list.</p>
             </div>
 		</section>
- 
-        
     </main>
     <footer class="page__footer footer-grid">
         <small>I made this.</small>

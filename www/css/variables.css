@@ -1,7 +1,6 @@
 /**
 @author: Calvin Lowe
 @url: https://calvinlowe.com
-@date: 17.03.18
 **/
 
 /*=============================================================================
@@ -9,11 +8,11 @@
 =============================================================================*/
 :root {
     /* Theme colours */
-    --primary-dark-colour: #07020D;
-    --secondary-dark-colour: #140526;
-    --primary-light-colour: #fcfcfc;
-    --primary-accent-colour: #fb4b4e;
-    --secondary-accent-colour: #ff531a;
+    --dark-one: #2E1F27;
+    --dark-two: #0C0A3E;
+    --light-one: #fcfcfc;
+    --accent-one: #FB4B4E;
+    --accent-two: #7B1E7A;
 
     /* External colours */
     --twitter: #1da1f2;

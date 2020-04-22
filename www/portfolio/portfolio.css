@@ -47,7 +47,7 @@ h1, h2 {
 
 h1 {
   font-weight: bold;
-  text-decoration: underline solid var(--primary-accent-colour); }
+  text-decoration: underline solid var(--accent-one); }
 
 h2 {
   font-weight: medium;
@@ -61,7 +61,7 @@ figcaption {
   font-weight: lighter; }
 
 a {
-  text-decoration-color: var(--primary-accent-colour); }
+  text-decoration-color: var(--accent-one); }
 
 a:link {
   color: var(--link-colour); }
@@ -70,13 +70,13 @@ a:visited {
   color: var(--link-visited-colour); }
 
 a:hover {
-  color: var(--primary-accent-colour); }
+  color: var(--accent-one); }
 
 a:active {
   border: 1px dotted var(--secondary-accent-colour); }
 
 a:focus {
-  border: 1px dotted var(--primary-accent-colour); }
+  border: 1px dotted var(--accent-one); }
 
 /*--------------------------------------------------------------
     ## Colours

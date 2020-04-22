@@ -8,9 +8,9 @@
 #   Sections
 =============================================================================*/
 .section {
-    color: var(--primary-dark-colour);
-    background-color: var(--primary-light-colour);
-    border-top: 4px solid var(--primary-accent-colour);
+    color: var(--dark-one);
+    background-color: var(--light-one);
+    border-top: 4px solid var(--accent-one);
     box-shadow: 0 4px 6px 6px rgba(0,0,0,0.2);
     border-radius: 4px;
 }
@@ -55,7 +55,7 @@
 #   Icons
 =============================================================================*/
 .page .svg-inline--fa{
-    color: var(--primary-dark-colour);
+    color: var(--dark-one);
     height: 1.5rem;
     width: 1.5rem;
 }

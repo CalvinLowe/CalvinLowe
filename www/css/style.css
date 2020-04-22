@@ -1,0 +1,131 @@
+/**
+@author: Calvin Lowe
+@url: https://calvinlowe.com
+**/
+
+/*=============================================================================
+#   Base
+=============================================================================*/
+* , *:before, *:after { 
+	box-sizing:border-box; 
+}
+
+p {
+	max-width: var(--text-width);
+}
+.page {
+	margin: 0;
+	background-color: var(--accent-two);
+	padding: min(0.5rem, 2%);
+
+	/* Fonts */
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+}
+.heading {
+	/* Fonts */
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 900;
+
+	margin-top: 0;
+	margin-bottom: 1rem;
+	color: var(--dark-one);
+}
+.list {
+	padding: 0;
+    list-style: none;
+}
+.link, .link:visited {
+	/* TODO: Disable hover effect on mobile? Detect touch  */
+	/* TODO: What colour should I use for links??? */
+    /*color: var(--secondary-dark-colour);*/
+}
+
+/*=============================================================================
+#   Navigation
+=============================================================================*/
+.navigation {
+	margin-bottom: 2rem;
+}
+
+.navigation__list {
+    display: flex;
+	flex-flow: row wrap;
+}
+
+.page__header .navigation__list {
+    margin: 0;
+}
+
+.navigation__list__item {
+    padding-right: 1rem;
+}
+
+/*=============================================================================
+#   Header
+=============================================================================*/
+.page__header {
+    padding: 2rem;
+    text-align: center;
+	background-color: var(--light-one);
+	height: 100vh;
+}
+.page__header__heading {
+	font-size: 5rem;
+	
+}
+
+/*=============================================================================
+#   Links
+=============================================================================*/
+.link_nav {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+	font-size: 1.5rem;
+	text-decoration: none;
+    color: var(--dark-one);
+	border-bottom: 5px solid var(--accent-one);
+    letter-spacing: 0.05rem;
+}
+
+.link_nav:hover, link_nav:focus {
+    text-shadow: 0 20px 20px rgba(0,0,0,0.2);
+}
+
+/*=============================================================================
+#   Main
+=============================================================================*/
+.main {
+	padding: 1rem;
+
+	background-color: var(--light-one);
+}
+
+/*=============================================================================
+#   Footer
+=============================================================================*/
+.page__footer {
+    padding: 2rem 1rem;
+    text-align: center;
+    background-color: var(--light-one);
+}
+/* Footer reveal */
+.main, .page__header {
+    z-index: 2;
+}
+/* Toggle these on using JS */
+.page__footer--reveal {
+    position: sticky;
+    bottom: -400px;
+    z-index: 1;
+}
+.page__footer--visually-hidden {
+    visibility: hidden;
+}
+
+/*=============================================================================
+#    State
+=============================================================================*/
+.visually-hidden {
+    display: none;
+}
