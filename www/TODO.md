@@ -1,4 +1,6 @@
 # TODO
+https://webfieldmanual.com/design.html
+https://coolors.co/fb4b4e-2e1f27-7b1e7a-0c0a3e-b33f62
 
 - Set up navigation links
 
